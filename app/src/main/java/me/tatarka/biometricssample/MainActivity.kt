@@ -154,12 +154,14 @@ class MainActivity : AppCompatActivity() {
                             BiometricPrompt.PromptInfo.Builder()
                                 .setTitle("Title")
                                 .setDescription("Description")
-                                .setNegativeButtonText("Cancel")
-                                .build(),
+//                                .setNegativeButtonText("Cancel")
+                                .setDeviceCredentialAllowed(true)
+//                                .build(),
+                                .build()
                             // A CryptoObject is required to ensure 'secure' biometrics. Even if you don't need to
                             // unlock what you pass here, you need to pass something or the device may use a
                             // different weaker form of biometrics.
-                            BiometricPrompt.CryptoObject(cipher)
+//                            BiometricPrompt.CryptoObject(cipher)
                         )
                     }
                 }
